@@ -1,39 +1,87 @@
 * {
-    background-color: #f4f4f4;
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: normal;
+  background-color: #f4f4f4;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+body {
+  margin-top: 10%;
+}
+
+h2 {
+  text-align: center;
+}
+
+#cartao {
+  width: 30%;
+  background-color: white;
+  padding: 40px;
+  border: 1px solid black;
+  border-radius: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#cartao #localizacao,
+#localizacao ul,
+#localizacao b,
+#localizacao ul li {
+  background-color: white;
+}
+
+#cartao #localizacao ul {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#btn {
+  margin-top: 5%;
+  background-color: #007ACC;
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  border: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    margin-top: 20%;
+    /* Aumente a margem superior em telas menores para centralizar o conteúdo */
   }
 
-  body{
+  #cartao {
+    padding: 10px;
+    /* Reduza o padding do cartão em telas menores */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #cartao #localizacao,
+  #localizacao ul,
+  #localizacao b,
+  #localizacao ul li {
+    margin-left: 0;
+  }
+
+  #btn {
     margin-top: 10%;
+    /* Ajuste a margem superior do botão em telas menores */
   }
+}
 
-  h1 {
-    text-align: center;
-  }
+@media screen and (max-width: 800px) {
 
-  #cartao{
-    background-color: white;
-    display:block;
-    margin-right: 40%;
-    margin-left: 40%;
-    padding: 40px;
-    border: 1px solid black;
-    border-radius: 25px;
+  #cartao {
+    padding: 10px;
+    /* Reduza o padding do cartão em telas menores */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
-
-  #cartao #localizacao, #localizacao ul, #localizacao b, #localizacao ul li{
-    background-color: white;
-  }
-
-  #btn{
-    margin-top: 5%;
-    background-color: #007ACC;
-    color: white;
-    border-radius: 10px;
-    padding: 15px;
-    width: 100%;
-    border:0;
-  }
-  
+}

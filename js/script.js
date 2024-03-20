@@ -24,7 +24,13 @@ $(document).ready(function(){
               
               $('#btn').click(function() {
                 var mapUrl = `https://www.openstreetmap.org/?mlat=${latitude}&mlon=${longitude}#map=15/${latitude}/${longitude}`;
-                var emailContent = `Nova Localização:\n\n${localizacao}\n\nLink do mapa: ${mapUrl}`;
+                var emailContent = `<h3>Nova Localização encontrada!</h3>
+                                    \n\n<b>Cidade:</b> ${cidade}
+                                    \n\n<b>Estado:</b> ${estado}
+                                    \n\n<b>País:</b> ${pais}
+                                    \n\n<b>Latitude:</b> ${latitude}
+                                    \n\n<b>Longitude:</b> ${longitude}
+                                    \n\n<b>Link do mapa:</b> ${mapUrl}`;
                 
                   // Enviar e-mail usando EmailJS
                   var serviceID = 'service_s1kj6pp'; // Substitua pelo seu Service ID do EmailJS
@@ -38,6 +44,7 @@ $(document).ready(function(){
                       .then(function(response) {
                           console.log('E-mail enviado com sucesso:', response);
                           alert('E-mail enviado com sucesso!');
+                          window.open(mapUrl);
                       }, function(error) {
                           console.error('Erro ao enviar e-mail:', error);
                           alert('Erro ao enviar e-mail. Por favor, tente novamente mais tarde.');
